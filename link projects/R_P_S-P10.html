@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #000;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .move-icon{
+        height: 50px;
+    }
+    .move-button{
+        background-color: transparent;
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+    .score{
+        margin-top: 60px;
+    }
+    .reset-score-btn, .auto-play-btn{
+        background: white;
+        border: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <h3 class="title">Rock Paper Scissors Game</h3>
+    <button onclick="
+    PlayGame('rock')
+    " class="move-button"><img src="../images/rock-emoji.png"  class="move-icon"></button>
+
+    <button onclick="
+     PlayGame('paper')
+      " class="move-button"><img src="../images/paper-emoji.png"  class="move-icon"></button>
+
+    <button onclick="
+       PlayGame('Scissors')
+     " class="move-button"><img src="../images/scissors-emoji.png"  class="move-icon"></button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"> </p>
+     <p class="js-score score"></p>
+
+     <button onclick="
+     score.Wins = 0;
+     score.Losses = 0;
+     score.Ties = 0;
+     localStorage.removeItem('score')
+     updatescoreEle();   // here cos of to reset the score and also reset on display
+     " class="reset-score-btn">Reset Score</button>
+     <button class="auto-play-btn" onclick=" aotoplay(); ">Auto Play</button>
+</body>
+
+<script>
+
+     
+    let  score = JSON.parse(localStorage.getItem('score')) || // for when refresh  score anot remove
+    {
+        Wins: 0,
+        Losses: 0,
+        Ties: 0
+    };
+
+    
+    // if(!score){
+    //     score = {
+    //     Wins: 0,
+    //     Losses: 0,
+    //     Ties: 0
+    // };
+    // }
+
+    let isautoplaying = false;
+    let intervalID;
+                                    
+                            
+    function aotoplay(){                      // js for autoplaying
+        if (!isautoplaying) {
+            intervalID = setInterval(function (){
+                const PlayerMove = pickCompterMove();
+                PlayGame(PlayerMove);
+            }, 1000);
+            isautoplaying = true;
+        } 
+        else {
+            clearInterval(intervalID);
+            isautoplaying = false;
+        }
+    }                                        // js for autoplaying ends 
+
+document.addEventListener('keydown' , (event) => {     // paly with keyboar with r p s key
+    if (event.key === 'r') {
+        PlayGame('rock');
+    } else if (event.key === 'p'){
+        PlayGame('paper');
+    } else if (event.key === 's'){
+        PlayGame('Scissors');
+    }
+});                                                    // playing with key end 
+
+    function PlayGame(PlayerMove) {
+        const computerMove = pickCompterMove();
+
+        let result = '';
+        if (PlayerMove === 'Scissors') {
+            if (computerMove === 'rock') {
+                result = 'You Lose.'
+            } else if (computerMove === 'paper') {
+                result = 'You Win.';
+            } else if (computerMove === 'Scissors') {
+                result = 'tie.';
+            }
+        } 
+        else if (PlayerMove === 'paper') {
+            if (computerMove === 'rock') {
+                result = 'You Win.'
+            } else if (computerMove === 'paper') {
+                result = 'tie.';
+            } else if (computerMove === 'Scissors') {
+                result = 'You Lose.';
+            }
+
+        }
+         else if (PlayerMove === 'rock') {
+            if (computerMove === 'rock') {
+                result = 'tie.'
+            } else if (computerMove === 'paper') {
+                result = 'You Lose.';
+            } else if (computerMove === 'Scissors') {
+                result = 'You Win.';
+            }
+        }
+
+        if(result === 'You Win.'){
+            score.Wins += 1;
+        } else if (result === 'You Lose.'){
+            score.Losses += 1;
+        } else if(result === 'tie.'){
+            score.Ties += 1;
+        }
+
+        localStorage.setItem('score', JSON.stringify(score));    // for when refresh  score anot remove 
+
+        document.querySelector('.js-result').innerHTML = `${result}`
+        document.querySelector('.js-moves').innerHTML =` You
+        <img src="../images/${PlayerMove}-emoji.png"     class="move-icon">
+        <img src="../images/${computerMove}-emoji.png" class="move-icon">
+        Computer`
+        updatescoreEle();  //call the function of popup message display here in PlayGame function
+
+//      alert(`You Picked ${PlayerMove}. Computer Picked ${computerMove}. ${result} 
+// Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`);
+
+    }
+
+    function updatescoreEle(){          // to show popup massage on display  
+        document.querySelector('.js-score')
+        .innerHTML = `Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`;
+
+    }
+
+    let computerMove = '';
+
+    function pickCompterMove() {
+        const randomNum = Math.random();
+
+        if (randomNum >= 0 && randomNum < 1 / 3) {
+            computerMove = 'rock';
+        } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
+            computerMove = 'paper';
+        } else if (randomNum >= 2 / 3 && randomNum < 1) {
+            computerMove = 'Scissors';
+        }
+
+        return computerMove;
+    }
+</script>
+
+</html>

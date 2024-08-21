@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid black;
+            /* Add border for better visibility */
+        }
+
+        #grey {
+            background-color: grey;
+        }
+
+        #white {
+            background-color: white;
+            color: black;
+        }
+
+        /* White text color for better visibility */
+        #blue {
+            background-color: blue;
+        }
+
+        #pink {
+            background-color: pink;
+        }
+
+        #yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Yellow text color for better visibility */
+        #green {
+            background-color: rgb(11, 220, 11);
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #orange {
+            background-color: orange;
+        }
+
+        #purple {
+            background-color: purple;
+        }
+
+        #brown {
+            background-color: brown;
+        }
+
+        #black {
+            background-color: black;
+            color: white;
+        }
+
+        /* White text color for better visibility */
+        #cyan {
+            background-color: cyan;
+            color: black;
+        }
+
+        #magenta {
+            background-color: magenta;
+        }
+
+        #lime {
+            background-color: lime;
+        }
+
+        #indigo {
+            background-color: indigo;
+        }
+
+        #violet {
+            background-color: violet;
+        }
+
+        #gold {
+            background-color: gold;
+            color: black;
+        }
+
+        /* Gold text color for better visibility */
+        #silver {
+            background-color: silver;
+            color: black;
+        }
+
+        /* Silver text color for better visibility */
+        #coral {
+            background-color: coral;
+        }
+
+        #teal {
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <span class="button" id="grey">GREY</span>
+        <span class="button" id="white">WHITE</span>
+        <span class="button" id="blue">BLUE</span>
+        <span class="button" id="pink">PINK</span>
+        <span class="button" id="yellow">YELLOW</span>
+        <span class="button" id="green">GREEN</span>
+        <span class="button" id="red">RED</span>
+        <span class="button" id="orange">ORANGE</span>
+        <span class="button" id="purple">PURPLE</span>
+        <span class="button" id="brown">BROWN</span>
+        <span class="button" id="black">BLACK</span>
+        <span class="button" id="cyan">CYAN</span>
+        <span class="button" id="magenta">MAGENTA</span>
+        <span class="button" id="lime">LIME</span>
+        <span class="button" id="indigo">INDIGO</span>
+        <span class="button" id="violet">VIOLET</span>
+        <span class="button" id="gold">GOLD</span>
+        <span class="button" id="silver">SILVER</span>
+        <span class="button" id="coral">CORAL</span>
+        <span class="button" id="teal">TEAL</span>
+    </div>
+</body>
+
+<script>
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            const color = event.target.id;
+            if (color === 'grey') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'white') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'blue') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'pink') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'yellow') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'green') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'red') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'orange') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'purple') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'brown') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'black') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'cyan') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'magenta') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'lime') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'indigo') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'violet') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'gold') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'silver') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'coral') {
+                body.style.backgroundColor = color;
+            }
+            if (color === 'teal') {
+                body.style.backgroundColor = color;
+            }
+        });
+    });
+</script>
+<!-- <script>         OR JS like that
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            body.style.backgroundColor = event.target.id;
+        });
+    });
+</script> -->
+
+</html>

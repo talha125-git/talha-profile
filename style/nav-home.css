@@ -1,0 +1,332 @@
+
+/*                                          home section css             */
+#home {                                 
+    margin-top: 160px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row; /* Changed from column to row to align content and image horizontally */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: left; /* Changed text-align to left */
+}
+
+#home-contant {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Changed to flex-start to align items to the left */
+    justify-content: center;
+    text-align: left; /* Changed text-align to left */
+    margin-right: 2rem; /* Added margin to the right to separate content from the image */
+}
+
+.light-mode span {
+    color: rgb(255, 0, 0);
+}
+
+.dark-mode span {
+    color: #0cf0e1;
+}
+span {
+    color: #0cf0e1;
+}
+
+#home-contant h3 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+#home-contant h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+#home-img {
+    display: flex;
+    justify-content: flex-end; /* Changed to flex-end to push the image to the right */
+    align-items: center;
+    margin-left: 5rem; /* Added margin to the left to separate image from the content */
+    margin-top: -5rem;
+}
+
+#home-img img {
+    border-radius: 25%;
+    width: 14vw;                /* Reduced width to make the image thinner */
+    height: 20vw;               /* Kept height the same to maintain the overall size */
+    
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.light-mode #home-img img {
+    border-color: red;
+    box-shadow: 0 0 10px red;
+}
+
+#home-img img {
+    border-color: #0cf0e1;
+    box-shadow: 0 0 10px #0cf0e1;
+}
+
+#home-img img:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 10px #0cf0e1);
+}
+.light-mode #home-img img:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 10px red);
+}
+
+#home-contant p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin-top: 2rem;
+}
+
+/*                                              home sec css end                             */
+
+
+/*                                              navbar    &  mode btn css                 */
+
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+
+.light-mode .header {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .header {
+    background-color: black;
+    color: white;
+}
+.header-top{
+    transition: transform 0.3s ease;
+}
+.header-top:hover {
+    transform: scale(1.1);
+}
+.logo {
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+     /* Add transition for smooth scaling */
+}
+
+
+
+.light-mode .logo {
+    color: black;
+}
+
+.dark-mode .logo {
+    color: white;
+}
+
+.logo span {
+    text-shadow: 0 0 30px #0cf0e1;
+}
+
+.light-mode .logo span {
+    text-shadow: 0 0 30px #f00c0c;
+}
+
+
+
+.navbar a {
+    font-size: 1.8rem;
+    margin-left: 6rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.light-mode .navbar a {
+    color: black;
+}
+
+.dark-mode .navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: #0cf0e1;
+    border-bottom: 3px solid #0cf0e1;
+}
+
+.light-mode .navbar a:hover {
+    color: red;
+    border-bottom: 3px solid red;
+}               
+ /*                                      mode-btn css                                 */
+:root {
+    /* --darkbg: #251D29;
+    --darkt: #ff00d4; */
+
+    --toggleHeight: 4em; /* Reduced size */
+    --toggleWidth: 8em;  /* Reduced size */
+    --toggleBtnRadius: 2.5em; /* Reduced size */
+    
+    --bgColor--night: rgb(98, 54, 117);
+    --mooncolor: hsl(0, 0%, 100%);
+    --bgColor--day: #000000;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tdnn {
+    margin: 0 auto;
+    position: relative;
+    height: var(--toggleHeight);
+    width: var(--toggleWidth);
+    border-radius: var(--toggleHeight);
+    background: var(--bgColor--night);
+    cursor: pointer;
+}
+
+.moon {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    transition: all 400ms ease-in-out;
+    top: 0.75em;
+    left: 0.75em;
+    transform: rotate(-75deg);
+    width: var(--toggleBtnRadius);
+    height: var(--toggleBtnRadius);
+    background: var(--bgColor--night);
+    box-shadow:
+        0.75em 0.625em 0 0em var(--mooncolor) inset,
+        rgba(255, 255, 255, 0.1) 0em -1.75em 0 -1.125em,
+        rgba(255, 255, 255, 0.1) 0.75em 1.75em 0 -1.125em,
+        rgba(255, 255, 255, 0.1) 0.5em 3.25em 0 -1em,
+        rgba(255, 255, 255, 0.1) 1.5em 0.5em 0 -1.025em,
+        rgba(255, 255, 255, 0.1) 2em 2em 0 -1.125em,
+        rgba(255, 255, 255, 0.1) 1.5em 3.25em 0 -1.125em,
+        rgba(255, 255, 255, 0.1) -1em 1.75em 0 -1.125em,
+        rgba(255, 255, 255, 0.1) -0.25em 2.5em 0 -1.125em;
+}
+
+.sun {
+    top: 1.125em;
+    left: 4.5em;
+    transform: rotate(0deg);
+    width: 1.75em;
+    height: 1.75em;
+    background: #fff;
+    box-shadow: 0.75em 0.75em 0 1.25em #fff inset,
+        0 -1.25em 0 -0.675em #fff,
+        0.875em -0.875em 0 -0.75em #fff,
+        1.25em 0 0 -0.675em #fff,
+        0.875em 0.875em 0 -0.75em #fff,
+        0 1.25em 0 -0.675em #fff,
+        -0.875em 0.875em 0 -0.75em #fff,
+        -1.25em 0 0 -0.675em #fff,
+        -0.875em -0.875em 0 -0.75em #fff;
+}
+ /*                                      mode-btn css    end                             */
+
+
+
+
+/*                                          h3 animate text css                                        */
+
+.text-animation{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    min-width: 28rem;
+    font-weight: 600;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "web developer";
+    color: var(--main-color);
+    animation: words 12s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite,
+                typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words{
+    0%, 
+    20%{
+        content:"Frontend Developer";
+    }
+    21%,
+    40%{
+        content:"Web Designer";
+    }
+    41%,
+    60%{
+        content: "UI / UX Designer";
+    }
+    61%, 
+    80%{
+        content:"Web Developer";
+    }
+    81%,
+    100%{
+        content:"Software Tester";
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+/*                                     text animation css end                               */

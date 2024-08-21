@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 55%;
+    overflow-x: hidden;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+#social-icons {                                 /*  icons btn css      */
+     
+    display: flex;
+    flex-direction: column; /* Arrange icons in a column */
+    align-items: center;
+    position: absolute; /* Fix the position to the left side */
+    top: 50%; /* Center vertically */
+    left: 2%; /* Adjust the position from the left */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+}
+
+#social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    width: 4.5rem;
+    background: transparent;
+    border: 2px solid #0cf0e1;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: #0cf0e1;
+    margin: 1rem 0; /* Adjust vertical spacing between icons */
+    transition: 0.3s ease-in-out;
+}
+
+.light-mode #social-icons a {
+    border-color: red;
+    color: red;
+    box-shadow: 0 0 2px red;
+}
+
+.dark-mode #social-icons a {
+    border-color: #0cf0e1;
+    color: #0cf0e1;
+    box-shadow: 0 0 10px #0cf0e1;
+}
+
+
+#social-icons a:hover {
+    color: #000000;
+    transform: scale(1.3) translate(-2px);
+    box-shadow: 0 0 0 #0cf0e1;
+    background-color: #0cf0e1;
+}
+.light-mode #social-icons a:hover {
+    color: #ffffff;
+    transform: scale(1.3) translate(-2px);
+    box-shadow: 0 0 0 #f70f0f;
+    background-color: red;
+
+
+}                                            /*  end here icons btn css      */
+
+                                
+
+
+
+  /*                                                  Projects css                          */
+#projects {                                    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18rem;
+}
+#pro {
+    font-size: 8rem;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#main-top, #main-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    /* transition: transform 0.1s ease-in-out; */
+}
+
+#main-top {
+    flex-wrap: wrap;
+}
+
+
+
+#main-top #pr:hover, #main-bottom #pr:hover {
+      
+    box-shadow: none;  
+    /* transform: scale(1.09); */
+}
+
+#main-bottom {
+    justify-content: center;
+}
+
+/* Project box styles */
+/* Common Styles */
+#pr {
+    text-align: center;
+    border: 2px solid #0cf0e1;
+    font-size: 12px;
+    border-radius: 2rem;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25rem;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0cf0e1; /* Initial box-shadow */
+    background-color: transparent; /* Transparent background */
+}
+
+#pr h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#pr p {
+    font-size: 16px;
+    padding-top: 2rem;
+}
+
+#pro-btn {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+#pr:hover #pro-btn {
+    bottom: 5px;
+    opacity: 1;
+}
+
+#pro-btn a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0cf0e1;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: 0 0 5px #0cf0e1;
+    border-radius: 20%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#pro-btn a:hover {
+    background-color: transparent;
+    color: #0cf0e1;
+    border: 2px solid #0cf0e1;
+    box-shadow: 0 0 10px transparent;
+    transform: scale(1.05);
+}
+
+/* Light Mode Styles */
+.light-mode #pr {
+    box-shadow: 0 0 8px #ff0000;
+    border: 2px solid #ed6969;
+}
+
+/* .light-mode #pro-btn a {
+    box-shadow: 0 0 5px #ff0000;
+} */
+
+.light-mode #pro-btn a:hover {
+    color: #000000;
+    border: 2px solid #f00c0c;
+    box-shadow: 0 0 5px transparent;
+    transform: scale(1.05);
+}                                          /*  Projects  css    ends   */ 
+
+
+
+#education {                     /* education css start */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18rem;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#educ {
+    font-size: 8rem;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#study {
+    text-align: center;
+    border: 2px solid #0cf0e1;
+    font-size: 12px;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px #0cf0e1;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+#study:hover {
+    transform: scale(1.05); 
+    box-shadow: none; 
+}
+
+.light-mode #study {
+    box-shadow: 0 0 15px #ff0000;
+    border: 1px solid #ed6969;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+}
+.light-mode #study:hover {
+    transform: scale(1.05); 
+    box-shadow: none; 
+}
+
+#study h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#study p {
+    font-size: 16px;
+    padding-top: 2rem;
+}                               /*  Education  css end     */ 
+
+
+
+
+
+
+
+
+
+
+
+/* home section animation  */
+
+
+

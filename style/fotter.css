@@ -1,0 +1,141 @@
+#footer{                     /*  Footer  css     */ 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    background-color: #000000;
+    margin-top: 10rem;
+    padding: 5rem;
+}
+#footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+#footer ul li a:hover{
+    border-bottom: 3px solid #0cf0e1;
+    
+}
+.light-mode #footer ul li a:hover{
+    border-bottom: 3px solid red;
+    
+}
+#footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+#footer #copyright{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+
+}                                /* Footer css end */
+
+
+
+/*                                  Footer icons css                                                 */
+/* General Styles for List and List Items */
+/* General Styles for List and List Items */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 6rem;
+}
+
+.social-item {
+    position: relative;
+    margin: 0 10px;
+}
+
+/* Styles for Links */
+.social-link {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #000000; /* Default background color */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.social-link:hover .fa {
+    color: #fff;
+}
+
+/* Font Awesome Icons Styles */
+.social-link .fa {
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Span Element */
+.social-link span {
+    display: none; /* Hide the text span */
+}
+
+/* Background Fill Animation */
+.social-link .background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000; /* Default background for .background */
+    transition: all 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.social-link:hover .background {
+    height: 100%;
+}
+
+/* Specific Background Colors for Social Links */
+.facebook-link .background {
+    background-color: #3b5998; /* Facebook Color */
+}
+
+.youtube-link .background {
+    background-color: #ff0000; /* YouTube Color */
+}
+
+.twitter-link .background {
+    background-color: #1da1f2; /* Twitter Color */
+}
+
+.instagram-link .background {
+    background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f); /* Instagram Gradient */
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+/* Show Tooltip on Hover */
+.social-item:hover .tooltip {
+    display: block;
+}

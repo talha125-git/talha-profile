@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talha - CV</title>
+  <style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; /* Adjusted font size for easier rem calculations */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 12% 4rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.logo {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo span {
+  text-shadow: 0 0 30px #0cf0e1;
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 6rem; /* space between NAV */
+  font-weight: 700;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  color: #0cf0e1;
+  border-bottom: 3px solid #0cf0e1;
+}
+span{
+  color: #0cf0e1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 20px;
+  background-color: #272727;
+  border-radius: 10px;
+  box-shadow: 0 0 24px #0cf0e1;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+  font-size: 2.2rem; /* Increased font size for headings */
+}
+
+p {
+  margin-bottom: 10px; /* Increased margin for paragraphs */
+  font-size: 1.8rem; /* Adjusted font size for paragraphs */
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  background-color: #444;
+  color: #0cf0e1;
+  font-size: 2.1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  padding: 10px 15px;
+
+}
+
+.section-content ul {
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+.section-content ul li{
+  font-size: 1.3rem;
+}
+
+#btn-group {
+  display: flex;
+  justify-content: left;
+}
+
+#btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background-color: #272727;
+  box-shadow: 0 0 13px #0cf0e1;
+  border-radius: 1rem;
+  font-size: 1.5rem; /* Increased font size for buttons */
+  margin-left: 20px;
+  color: rgb(255, 255, 255);
+  border: 2px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #0cf0e1;
+}
+
+
+
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="#home" class="logo">Malik <span>Abutalha</span> Raheem</a>
+
+    <box-icon name='menu' id="menu-icon"></box-icon>
+
+    <nav class="navbar">
+        <ul>
+
+            <a href="../protfolio js_1.html" class="active">home</a>
+            <a href="#education">education</a>
+            <a href="#services">services</a>
+            <a href="#contact">contact</a>
+
+        </ul>
+
+    </nav>
+</header>
+
+  <div class="container">
+    <h1>MALIK ABUTALHA RAHEEM</h1>
+    <p><span>Web Developer</span></p>
+
+    <div class="section">
+      <div class="section-header"> <b>About Me</b></div>
+      <div class="section-content">
+        <p>I am a passionate web developer with expertise in HTML, CSS, and JavaScript. I enjoy creating responsive and user-friendly websites.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header"> <b>Experience</b></div>
+      <div class="section-content">
+        <h3>Web Developer</h3>
+        <p>ABC Company | 2024 - Present</p>
+        <ul>
+          <li>Designed and developed responsive websites using HTML, CSS, and JavaScript.</li>
+          <li>Collaborated with the design team to create visually appealing interfaces.</li>
+          <li>Implemented SEO best practices to improve website visibility.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header"> <b>Education</b></div>
+      <div class="section-content">
+        <h3>Bachelor of Science in Software Engineering</h3>
+        <p><a href="https://cecos.edu.pk/"><span style="color: aqua;">CECOS UNIVERSITY PESHAWAR</span></a> | 2023 - 2027</p>
+        <p>GPA: <b>3.8</b></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header"> <b>Skills</b></div>
+      <div class="section-content">
+        <ul>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Responsive Design</li>
+          <li>Bootstrap</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Contact</div>
+      <div class="section-content">
+        <p>Email: abutalhaa844@gmail.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Website: www.malikabutalharaheem.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="btn-group">
+    <a href="../protfolio js_1.html" id="btn">HOME</a>
+   
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

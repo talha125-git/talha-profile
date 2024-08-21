@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .project {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #insert {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .key {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the key and watch magic</div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const insert = document.getElementById('insert');
+
+    function applyTableStyles() {
+        const style = document.createElement('style');
+        style.innerHTML = `
+        .color table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .color th, .color td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .color th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .color tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .color tr:hover {
+            background-color: #ddd;
+        }
+        `;
+        document.head.appendChild(style);
+    }
+
+    window.addEventListener('keydown', (e) => {
+        insert.innerHTML = `
+        <div class='color'>
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Keycode</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </table>
+        </div>
+        `;
+        applyTableStyles();
+    });
+</script>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>    without css style in js 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="project">
+        <div id="insert">
+            <div class="key">press the key and wtach magic</div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const insert = document.getElementById('insert');
+
+    window.addEventListener('keydown', (e) => {
+        insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    
+  </table>
+    </div>
+  `;
+    });
+
+
+</script>
+
+</html> -->

@@ -1,0 +1,199 @@
+#btn-group {                                 /*cv and projects btn*/
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+#btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    margin-top: 25px;
+    background-color: #0cf0e1; /* Default color for dark mode */
+    box-shadow: 0 0 13px #0cf0e1;
+    border-radius: 4rem;
+    font-size: 1.9rem;
+    color: black; /* Default text color for dark mode */
+    border: 2px solid transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.light-mode #btn {
+    background-color: rgb(246, 104, 104); /* Red background for light mode */
+    color: azure; /* White text color for light mode */
+    border: 2px solid black; /* Black border for light mode */
+    box-shadow: 0 0 5px red; /* Red shadow for light mode */
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
+
+.light-mode #btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px red; /* Red shadow for light mode */
+}
+
+#btn-group a {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#btn-group a:nth-of-type(1) {
+    background-color: #0cf0e1; /* Default color for dark mode */
+    color: black; /* Default text color for dark mode */
+    border: 2px solid black; /* Default border */
+    box-shadow: 0 0 5px #0cf0e1;
+}
+
+#btn-group a:nth-of-type(1):hover {
+    background-color: #000000;
+    color: #0cf0e1;
+    border: 2px solid #0cf0e1;
+    box-shadow: 0 0 25px transparent;
+}
+
+.light-mode #btn-group a:nth-of-type(1) {
+    background-color: rgb(246, 104, 104); /* Red background for light mode */
+    color: azure; /* White text color for light mode */
+    border: 2px solid black; /* Black border for light mode */
+    box-shadow: 0 0 5px red; /* Red shadow for light mode */
+}
+
+.light-mode #btn-group a:nth-of-type(1):hover {
+    background-color: rgb(255, 255, 255); /* White background for light mode */
+    color: #000000; /* Black text color for light mode */
+    border: 2px solid #f00c0c; /* Red border for light mode */
+    box-shadow: 0 0 25px transparent; /* Keep transparent shadow for light mode */
+}
+
+#btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: #0cf0e1;
+    border: 2px solid #0cf0e1;
+    box-shadow: 0 0 25px transparent;
+}
+
+#btn-group a:nth-of-type(2):hover {
+    background-color: #0cf0e1;
+    color: #000000;
+    border: 2px solid #000000;
+    box-shadow: 0 0 25px transparent;
+}
+
+.light-mode #btn-group a:nth-of-type(2) {
+    background-color: rgb(255, 255, 255); /* White background for light mode */
+    color: #000000; /* Black text color for light mode */
+    border: 2px solid #f00c0c; /* Red border for light mode */
+    box-shadow: 0 0 25px transparent; /* Keep transparent shadow for light mode */
+}
+
+.light-mode #btn-group a:nth-of-type(2):hover {
+    background-color: rgb(246, 104, 104); /* Red background for light mode */
+    color: azure; /* White text color for light mode */
+    border: 2px solid black; /* Black border for light mode */
+    box-shadow: 0 0 5px red; /* Red shadow for light mode */
+
+}                                           /*cv and projects btn ends here */
+
+.dark-mode .download-btn {                              /*download btn css*/
+    background-color: #0cf0e1;
+    color: #ff2121;
+    border: 2px solid #000000;
+    border-radius: 4rem;
+    padding: 1.2rem;
+    top: 12px;
+    right: 25px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0 0 5px #0cf0e1;
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.light-mode .download-btn {                             
+    background-color: rgb(246, 104, 104);
+    color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 4rem;
+    padding: 1.2rem;
+    top: 12px;
+    right: 25px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0 0 5px red;
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dark-mode .download-btn:hover {
+    background-color: #000000;
+    border: 2px solid  #0cf0e1;
+    box-shadow: 0 0 25px transparent;
+    transform: scale(1.1);
+}
+.light-mode .download-btn:hover {
+    background-color: transparent;
+    border: 2px solid  red;
+    box-shadow: 0 0 25px transparent;
+    transform: scale(1.2);
+}
+
+.download-btn .download-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.download-btn:hover .download-icon {
+    opacity: 1;
+}
+
+.dark-mode .download-btn .download-icon svg {
+    stroke: #000000; /* Default icon color */
+}
+.light-mode .download-btn .download-icon svg {
+    stroke: #000000; /* Default icon color */
+}
+
+.dark-mode .download-btn:hover .download-icon svg {
+    stroke: #0cf0e1; /* Icon color on hover */
+}
+
+.dark-mode .download-btn .text {
+    color: black;
+    transition: opacity 0.3s ease-in-out;
+}
+.light-mode .download-btn .text {
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.dark-mode .download-btn:hover .text {
+    opacity: 0;
+}                                               
+.light-mode .download-btn:hover .text {
+    opacity: 0;
+}                                                /* download btn css end  */
