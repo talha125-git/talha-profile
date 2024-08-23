@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #696e7f, #6e81a8, #608fc9, #5e5ce8, #a1a0a0); 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh; 
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 21px 13px;
+    background: linear-gradient(135deg, #696e7f, #6e81a8, #608fc9, #9c9bed, #dc9c9c); 
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -20px; 
+    transition: 0.4s ease-in-out;
+}
+.logo:hover{
+    transform: scale(0.8);
+}
+
+.logo img {
+    height: 75px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: 710px;
+    padding: 0;
+    gap: 30px;
+}
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000; 
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+   background-color: rgb(0, 229, 255); 
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    transform: translateX(0);
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 229, 255);
+    transform: scale(1.1); 
+}
+
+
+
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.paraImg {
+    position: relative;
+    left: 920px;
+    width: 149px;
+}
+
+.paraImg img {
+    width: 120%; 
+    height: auto;
+}
+
+.hedings {
+    position: relative;
+    right: -208px;
+    text-align: start;
+    margin-top: -10px;
+}
+.hedings .h2 {
+    font-size: 21px;
+    margin-left: -189px;
+}
+.hedings .h3 {
+    font-size: 20px;
+    margin-left: -148px;
+}
+.hedings .h1 {
+    font-size: 24px;
+    margin-left: -180px;
+    margin-bottom: 11px;
+    cursor: pointer;
+    position: relative;
+    top: -152px;
+    transition: filter 0.2s ease-in; 
+}
+
+.hedings .h1:hover {
+    filter: drop-shadow(10px 12px 25px rgb(16, 25, 16)); 
+}
+
+.hedings .para {
+    font-size: 15px;
+    text-align: justify;
+    margin-left: -204px;
+}
+
+
+.image {
+    position: relative;
+    left: 719px;
+    top: -229px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.image img {
+    width: 400px;
+    margin-top: -32px;
+    margin-left: 3px;
+    transition: filter 0.2s ease-in; /* Smooth transition for filter effect */
+}
+
+.image img:hover {
+    filter: drop-shadow(1px 1px 15px rgb(37, 63, 80)); /* Green drop shadow on hover */
+}
+
+
+.imgPl img {
+    width: 430px;
+    position: relative;
+    top: -405px;
+    left: -35px;
+}
+
+.btn {
+    display: flex;
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+.btn .start{
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+}
+.btn .start:hover{
+    color: white;
+   background-color: transparent;
+}
+.btn button {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.btn button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; 
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.btn button:hover::before {
+    width: 100%;
+    left: 0px;
+}
+
+.btn button:hover {
+    transform: scale(1.1); 
+}
+
+
+@media screen and (max-width: 700px){
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100vh; 
+    }
+
+    .hedings {
+        right: -210px;
+        margin-top: -25px;
+    }
+    .paraImg {
+        left: 295px;
+        top: 110px;
+    }
+    .image {
+        left: 60px;
+        top: 55px;
+    }
+    nav ul {
+        margin-left: 93px;
+    }
+    .btn {
+        gap: 30px;
+        margin-left: 100px;
+        margin-top: 33px;
+    }
+    .hedings .para {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .hedings .h3 {
+        margin-top: 3px;
+        margin-left: 60px;
+    }
+    .hedings .h2 {
+        margin-left: 10px;
+        margin-top: 133px;
+    }
+}
